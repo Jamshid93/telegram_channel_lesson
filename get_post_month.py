@@ -15,12 +15,12 @@ def get_post_month(data:dict,month:int)->int:
     count = 0
     messages=data['messages']
     for i in messages:
-        if i["date"]=="2022-09-30T12:34:15":
-            count+=1
+        if i['type']=="message":
+            if int(i['date'][5:7])==month:
+                count+=1
 
     # Loop through the dictionary
   
- 
     return count
 
 # Path of the file to read
