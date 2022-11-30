@@ -13,6 +13,11 @@ def get_post_month(data:dict,month:int)->int:
     """
     # Initialize a counter
     count = 0
+    messages=data['messages']
+    for i in messages:
+        if i["date"]=="2022-09-30T12:34:15":
+            count+=1
+
     # Loop through the dictionary
   
  
